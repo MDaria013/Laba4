@@ -77,11 +77,11 @@ public class Units {
     }
 
     public Double getFuel_consumption() {
+        this.fuel_consumption = this.termal_capacity * this.load_factor*365/(this.burnup*100000);  //тепловая мощность*коэфф. использ установленной мощности
+                                                                                                   // /коэфф. выгорания
+        double value = Math.round(this.fuel_consumption * 100) / 100;//Округляет число до ближайшего целого
 
-        this.fuel_consumption = this.termal_capacity * this.load_factor / this.burnup;
-        double result = Math.round(this.fuel_consumption * 100) / 100;
-
-        return result;
+        return value;
     }
 
     public void setSite(int site) {

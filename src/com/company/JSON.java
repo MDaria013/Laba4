@@ -20,7 +20,7 @@ public class JSON {
 
         for (Object obj : jsonArray) {
             JSONObject pars = (JSONObject) obj;
-            reactorsList.add(new Reactors((String) pars.get("class"), (Double) pars.get("burnup"), (Double) pars.get("kpd"),
+            reactorsList.add(new Reactors((String) pars.get("classs"), (Double) pars.get("burnup"), (Double) pars.get("kpd"),
                     (Double) pars.get("enrichment"), (Double) pars.get("termal_capacity"), (Double) pars.get("electrical_capacity"),
                     (Double) pars.get("life_time"), (Double) pars.get("first_load"),"JSON"));
         }
